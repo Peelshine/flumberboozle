@@ -27,7 +27,7 @@ def parse(
     converted_lines = []
     in_comment = False
     in_braces = False
-    active_category = ''
+
 
     for file_name in config_files:
         # Get the current file as a string
@@ -37,6 +37,9 @@ def parse(
 
             # Iterate over every line in the file
             for line in file:
+                active_category = ''
+
+                new_line = ''
 
                 # Catch any simple errors
                 if line.count('=') > 1:
@@ -70,25 +73,24 @@ def parse(
                     # after determining if inside of a category,
                     # otherwise the category name will include the
                     # braces.g
-                    if (in_braces and
-                    character in tokens['braces_end']
+                    if (character in tokens['braces_end']
                     ):
-                        in_category = False
+                        in_braces = False
 
                     if in_braces:
                         active_category += character
                         continue
 
-                    elif (not in_braces and
-                    character in tokens['braces_start']
+                    elif (character in tokens['braces_start']
                     ):
                         in_braces = True
+                        continue
 
 
 
-                    print(character)
-
-                old_line = line # i go at the end
+                    print('char',character,active_category)
+                    new_line += character
+                print(new_line)
 
 
 def write(
