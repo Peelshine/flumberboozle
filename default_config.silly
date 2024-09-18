@@ -1,0 +1,24 @@
+[
+This is the default config for flumberboozle
+]
+[
+If you want to make a modification, it is advised you make it in
+the user_config.silly file instead of this one, in case you want to
+un-make the modification.
+]
+[
+You can do basically anything anywhere, including even omit the type
+of a variable and let flumberboozle figure it out for you
+The only thing to watch out for is that if you put an equals sign in
+the name of a value, things will break
+If things arent working as expected, check the dev_config.py file
+Any errors will be outputted there.
+]
+
+category:
+    thing1 / text = hallo! how r u?
+    thing2 / number = 62,325.15
+    thing3a / flag = true
+    thing3b / flag = TrUe
+    thing3c / flag = FALSE
+    thing4 / list = glug glug glug, 123, true
