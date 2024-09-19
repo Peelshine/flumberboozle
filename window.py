@@ -1,7 +1,4 @@
-###################
-# LIBRARY IMPORTS #
-###################
-import glfw
+import pyglet
 
 # placeholder config variables, in future will be loaded from file
 # game resolution will be 120x90 4:3, but until i figure out how
@@ -13,35 +10,25 @@ RESOLUTION_Y = 1080
 def init(
 ) -> None:
     print('Initializing window...')
-    if not glfw.init():
-        return
 
-    window = glfw.create_window(
-        RESOLUTION_X,
-        RESOLUTION_Y,
-        'flumberboozle',
-        None,
-        None
+    window = pyglet.window.Window()
+
+    label = pyglet.text.Label(
+        'Hello, world',
+        font_name='Times New Roman',
+        font_size=36,
+        x=window.width//2, y=window.height//2,
+        anchor_x='center', anchor_y='center'
     )
 
-    if not window:
-        glfw.terminate()
-        return
+    @window.event
+    def on_draw():
+        window.clear()
+        label.draw()
 
-    print('Window initialized! Yippee!')
-
-    glfw.make_context_current(window)
-
-    while not glfw.window_should_close(window):
-        # RENDER HERE
-
-        glfw.swap_buffers(window)
-
-        glfw.poll_events()
-
-    close()
+    pyglet.app.run()
 
 
 def close(
 ) -> None:
-    glfw.terminate
+    print('haha no lol')

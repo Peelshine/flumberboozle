@@ -1,11 +1,3 @@
-###################
-# LIBRARY IMPORTS #
-###################
-import glfw
-
-###################
-# PROJECT IMPORTS #
-###################
 import window
 
 def main(
