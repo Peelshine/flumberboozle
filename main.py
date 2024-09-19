@@ -1,10 +1,10 @@
 import window
 
+
+
 def main(
 ) -> None:
     window.init()
-
-
 
 
 
