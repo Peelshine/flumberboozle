@@ -1,10 +1,11 @@
 
 
+
 # !!! IF YOU WANT TO CHANGE VALUE, DONT DO IT HERE !!!
 # Add your changes to usersettings.toml instead!
 #
 # If you change something here and something breaks because of it,
-# finding the original value is time-consuming!
+# finding the original value takes time!
 #
 # Instead, add your change to usersettings.toml!
 # That way, to "un-make" the change, you can simply remove the
