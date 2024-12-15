@@ -2,7 +2,7 @@ cargo-features = ["codegen-backend"]
 
 [package]
 name = "flumberboozle"
-version = "0.1.0"
+version = "0.6.9"
 edition = "2021"
 
 [dependencies]
