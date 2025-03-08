@@ -4,5 +4,4 @@
   <br>
   <img src="https://forthebadge.com/images/badges/does-not-contain-treenuts.svg" alt="Does not contain Tree Nuts">
   <img src="https://forthebadge.com/images/badges/gluten-free.svg" alt="Gluten Free">
-  
 </p>
